@@ -1,6 +1,23 @@
-﻿body {
-  background-color: #e4e4e4;
-  color: black;
+﻿:root {
+  --black: black;
+  --darkBlack: #020b0d;
+  --white: white;
+  --offWhite: #e4e4e4;
+  --bright: rgba(234, 234, 234, 1);
+  --Bluish: #257a8c;
+  --lightBlue: #25a89b;
+  --deepBluish: rgb(13, 85, 85);
+  --darkBlue: rgba(37, 122, 140, 0.5);
+  --yellow: #facc15;
+  --orange: orange;
+  --lightGray: #a8a8a8;
+  --gray: gray;
+  --grey: grey;
+  --dullGray: #808080;
+}
+body {
+  background-color: var(--offWhite);
+  color: var(--black);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -25,8 +42,8 @@ header div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #257a8c;
-  color: white;
+  background-color: var(--Bluish);
+  color: var(--white);
   height: 40px;
   font-size: 12px;
   font-weight: bold;
@@ -37,47 +54,47 @@ nav div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(85deg, #020b0d 30%, white);
+  background: linear-gradient(85deg, var(--darkBlack) 30%, var(--white));
   /*background-color: #020b0d;*/
 
   height: 140px;
-  border-bottom: 1px solid #facc15;
-  border-top: 1px solid #facc15;
+  border-bottom: 1px solid var(--yellow);
+  border-top: 1px solid var(--yellow);
 }
 
 nav button {
   font-size: 18px;
   padding: 20px;
   border: none;
-  color: grey;
-  background: white;
+  color: var(--grey);
+  background: var(--white);
   font-weight: bold;
   transition: all 200ms ease-in-out;
-  box-shadow: 5px 5px 10px rgba(37, 122, 140, 0.5);
+  box-shadow: 5px 5px 10px var(--darkBlue);
 }
 nav button:hover {
-  color: white;
-  background: #25a89b;
+  color: var(--white);
+  background: var(--lightBlue);
   cursor: pointer;
   opacity: 0.8;
 }
 
 .empty {
   height: 25px;
-  background-color: #257a8c;
+  background-color: var(--bluish);
 }
 .empty-1 {
   height: 200px;
-  background: #e4e4e4;
+  background: var(--offWhite);
 }
 
 .form-group {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/116/314/original/Airportcouple.jpg?1708623453");
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid gray;
+  border: 1px solid var(--gray);
   height: 500px;
-  border-bottom: 5px solid #257a8c;
+  border-bottom: 5px solid var(--bluish);
 }
 
 .form-group,
@@ -90,12 +107,12 @@ nav button:hover {
 .slogan {
   align-items: center;
   font-size: 30px;
-  color: white;
+  color: var(--white);
   line-height: 1.5;
 }
 form {
-  background: rgba(234, 234, 234, 1);
-  border: 1px solid gray;
+  background: var(--bright);
+  border: 1px solid var(--gray);
   height: 450px;
 
   font-size: 10px;
@@ -119,21 +136,21 @@ article {
   height: 350px;
   font-weight: bold;
   margin-bottom: 20px;
-  background: white;
+  background: var(--white);
   padding-left: 20px;
   padding-bottom: 20px;
-  box-shadow: 10px 10px 20px grey;
+  box-shadow: 10px 10px 20px var(--grey);
 }
 .block {
-  border-left: 3px solid #facc15;
-  border-bottom: 3px solid #facc15;
+  border-left: 3px solid var(--yellow);
+  border-bottom: 3px solid var(--yellow);
   border-radius: 10px;
   padding-right: 10px;
   padding-bottom: 30px;
 }
 article h2 {
-  color: orange;
-  -webkit-text-stroke-color: #e4e4e4;
+  color: var(--orange);
+  -webkit-text-stroke-color: var(--offWhite);
   -webkit-text-stroke-width: 0.2px;
   text-align: center;
   font-size: 30px;
@@ -148,7 +165,7 @@ article div {
   display: flex;
   justify-content: space-around;
   font-size: 18px;
-  color: #25a89b;
+  color: var(--lightBlue);
 }
 .testimonial-container {
   width: 80%;
@@ -162,8 +179,8 @@ article div {
   text-align: center;
   height: 750px;
   margin-bottom: 20px;
-  border: solid 2px #257a8c;
-  box-shadow: 10px 10px 20px grey;
+  border: solid 2px var(--bluish);
+  box-shadow: 10px 10px 20px var(--grey);
 }
 
 .reviews {
@@ -173,18 +190,18 @@ article div {
 .review-1,
 .review-2,
 .review-3 {
-  border: 1px solid #facc15;
+  border: 1px solid var(--yellow);
   padding: 10px;
-  background-color: white;
+  background-color: var(--white);
   height: 400px;
   flex: 1;
   margin-left: 15px;
   margin-right: 15px;
-  box-shadow: 5px 5px 10px #257a8c;
+  box-shadow: 5px 5px 10px var(--Bluish);
 }
 
 .testimonials img {
-  border: 1px solid white;
+  border: 1px solid var(--white);
   border-radius: 50%;
 }
 heading-captions {
@@ -192,26 +209,26 @@ heading-captions {
   padding-bottom: 100px;
 }
 .checked {
-  color: orange;
+  color: var(--orange);
 }
 .testimonials h3 {
   padding-top: 70px;
   padding-bottom: 20px;
-  color: rgb(13, 85, 85);
+  color: var(--deepBluish);
   font-size: 30px;
 }
 .testimonials h2 {
-  color: white;
-  -webkit-text-stroke-color: #facc15;
+  color: var(--white);
+  -webkit-text-stroke-color: var(--yellow);
   -webkit-text-stroke-width: 0.2px;
   font-size: 40px;
   padding-bottom: 20px;
 }
 .testimonials h4 {
-  color: white;
+  color: var(--white);
   font-size: 20px;
   padding-bottom: 20px;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px var(--black);
   padding-bottom: 120px;
 }
 
@@ -228,32 +245,32 @@ heading-captions {
 .nav-link,
 .general-links,
 a {
-  color: black;
+  color: var(--black);
   transition: all 200ms ease-in-out;
 }
 
 .nav-link a:visited {
-  color: white;
+  color: var(--white);
 }
 
 .general-links a:visited {
-  color: #257a8c;
+  color: var(--bluish);
 }
 
 .nav-link a:hover {
-  color: #facc15;
+  color: var(--yellow);
 }
 
 .general-links a:hover {
-  color: #facc15;
+  color: var(--yellow);
 }
 
 .general-links {
   display: flex;
   justify-content: space-around;
-  color: #257a8c;
+  color: var(--bluish);
   text-align: center;
-  background: white;
+  background: var(--white);
   padding-bottom: 10px;
 }
 .general-links ul {
@@ -268,7 +285,7 @@ a {
   font-size: larger;
   margin-bottom: 0%;
   text-align: center;
-  color: #808080;
+  color: var(--dullGray);
 }
 .general-links div {
   margin-top: 25px;
@@ -277,19 +294,19 @@ a {
 }
 
 .quick-links {
-  border-left: 1px solid #facc15;
-  border-top: 1px solid #facc15;
+  border-left: 1px solid var(--yellow);
+  border-top: 1px solid var(--yellow);
 }
 .other-links {
-  border-right: 1px solid #facc15;
-  border-bottom: 1px solid #facc15;
+  border-right: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--yellow);
 }
 
 .fa-brands {
   margin-top: 15px;
   padding-left: 25px;
   font-size: 35px;
-  color: white;
+  color: var(--white);
 }
 
 .social-media-icons a {
@@ -297,21 +314,21 @@ a {
 }
 
 .social-media-icons a:hover {
-  color: #25a89b;
+  color: var(--lightBlue);
   font-size: 40px;
 }
 
 .fa-circle-check {
   padding-right: 10px;
   font-size: 15px;
-  color: #a8a8a8;
+  color: var(--lightGray);
 }
 footer {
   display: flex;
   justify-content: space-around;
-  background: #257a8c;
+  background: var(--Bluish);
 
-  color: white;
+  color: var(--white);
 }
 #returnTrip {
   display: none;
