@@ -320,7 +320,8 @@ a {
 
 .social-media-icons a:hover {
   color: var(--lightBlue);
-  font-size: 40px;
+  /*font-size: 40px; */
+  transform: scale(1.5);
 }
 
 .fa-circle-check {
